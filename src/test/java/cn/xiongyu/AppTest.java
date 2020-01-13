@@ -86,6 +86,10 @@ public class AppTest
         Arrays.sort(a, cmp);
         System.out.print(Arrays.toString(a));
     }
+    @Test
+    public void test08() {
+        System.out.println("测试一下下");
+    }
 }
 
 class MyComparator implements Comparator<Integer> {
