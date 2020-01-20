@@ -1,4 +1,4 @@
-package cn.xiongyu.nowcoder;
+package cn.xiongyu.nowcoder.offer;
 
 /**
  * ClassName: NotRepeatFirst

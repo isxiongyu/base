@@ -1,7 +1,4 @@
-package cn.xiongyu.nowcoder;
-
-import java.util.ArrayList;
-import java.util.List;
+package cn.xiongyu.nowcoder.offer;
 
 /**
  * ClassName: UglyNumber
