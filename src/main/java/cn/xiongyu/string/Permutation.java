@@ -1,7 +1,7 @@
 package cn.xiongyu.string;
 
+import java.lang.String;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 /**

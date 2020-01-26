@@ -1,5 +1,7 @@
 package cn.xiongyu.designPattern.adapter;
 
+import java.lang.String;
+
 /**
  * ClassName: AdapterTest
  * Package: cn.xiongyu.designPattern.adapter

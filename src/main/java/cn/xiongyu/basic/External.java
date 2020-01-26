@@ -1,5 +1,7 @@
 package cn.xiongyu.basic;
 
+import java.lang.String;
+
 /**
  * ClassName: External
  * Package: cn.xiongyu.basic

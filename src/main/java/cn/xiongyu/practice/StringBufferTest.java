@@ -1,5 +1,7 @@
 package cn.xiongyu.practice;
 
+import java.lang.String;
+
 /**
  * ClassName: StringBufferTest
  * Package: cn.xiongyu.practice

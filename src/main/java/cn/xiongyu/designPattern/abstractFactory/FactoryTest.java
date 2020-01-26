@@ -1,5 +1,7 @@
 package cn.xiongyu.designPattern.abstractFactory;
 
+import java.lang.String;
+
 /**
  * ClassName: FactoryTest
  * Package: cn.xiongyu.designPattern.factory

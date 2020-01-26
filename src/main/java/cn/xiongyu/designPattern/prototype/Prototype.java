@@ -1,6 +1,7 @@
 package cn.xiongyu.designPattern.prototype;
 
 import java.io.*;
+import java.lang.String;
 
 /**
  * ClassName: Prototype

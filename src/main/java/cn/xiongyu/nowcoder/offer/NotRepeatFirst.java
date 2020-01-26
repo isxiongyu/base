@@ -7,6 +7,7 @@ package cn.xiongyu.nowcoder.offer;
  * Date: 20-1-11 下午3:32
  * Author: xiongyu
  */
+import java.lang.String;
 import java.util.*;
 public class NotRepeatFirst {
     static StringBuffer sb = new StringBuffer();

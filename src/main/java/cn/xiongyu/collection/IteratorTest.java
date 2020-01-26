@@ -1,8 +1,8 @@
 package cn.xiongyu.collection;
 
+import java.lang.String;
 import java.util.HashSet;
 import java.util.Iterator;
-import java.util.Set;
 
 /**
  * ClassName: IteratorTest

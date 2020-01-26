@@ -1,5 +1,7 @@
 package cn.xiongyu.nowcoder.offer;
 
+import java.lang.String;
+
 /**
  * ClassName: UglyNumber
  * Package: cn.xiongyu.nowcoder

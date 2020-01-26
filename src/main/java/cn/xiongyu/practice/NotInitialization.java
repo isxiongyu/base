@@ -1,5 +1,7 @@
 package cn.xiongyu.practice;
 
+import java.lang.String;
+
 /**
  * ClassName: NotInitialization
  * Package: cn.xiongyu

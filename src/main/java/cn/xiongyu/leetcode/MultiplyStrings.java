@@ -1,5 +1,7 @@
 package cn.xiongyu.leetcode;
 
+import java.lang.String;
+
 /**
  * ClassName: MultiplyStrings
  * Package: cn.xiongyu.leetcode

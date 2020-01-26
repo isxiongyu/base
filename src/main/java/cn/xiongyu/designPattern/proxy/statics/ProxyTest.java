@@ -1,5 +1,7 @@
 package cn.xiongyu.designPattern.proxy.statics;
 
+import java.lang.String;
+
 /**
  * ClassName: ProxyTest
  * Package: cn.xiongyu.designPattern.proxy.statics

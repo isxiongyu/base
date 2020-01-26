@@ -1,5 +1,7 @@
 package cn.xiongyu.designPattern.singleton;
 
+import java.lang.String;
+
 /**
  * ClassName: SingletonTest
  * Package: cn.xiongyu.designPattern.singleton

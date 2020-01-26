@@ -4,6 +4,7 @@ import cn.xiongyu.designPattern.proxy.dynamic.cglib.MyMethodInterceptor;
 import cn.xiongyu.designPattern.proxy.dynamic.cglib.Service;
 import net.sf.cglib.proxy.Enhancer;
 
+
 /**
  * ClassName: ProxyTest
  * Package: cn.xiongyu.designPattern.proxy.dynamic

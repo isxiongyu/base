@@ -1,5 +1,7 @@
 package cn.xiongyu.string;
 
+import java.lang.String;
+
 /**
  * ClassName: stringTest
  * Package: cn.xiongyu.string

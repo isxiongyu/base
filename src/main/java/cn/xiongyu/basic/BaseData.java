@@ -1,5 +1,6 @@
 package cn.xiongyu.basic;
 
+
 /**
  * ClassName: BaseData
  * Package: cn.xiongyu.basic

@@ -2,9 +2,9 @@ package cn.xiongyu;
 
 import static org.junit.Assert.assertTrue;
 
-import com.sun.org.apache.xml.internal.security.Init;
 import org.junit.Test;
 
+import java.lang.String;
 import java.util.*;
 
 /**
@@ -88,7 +88,7 @@ public class AppTest
     }
     @Test
     public void test08() {
-        System.out.println("测试一下下");
+
     }
 }
 

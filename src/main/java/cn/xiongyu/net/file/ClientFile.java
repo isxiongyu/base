@@ -1,6 +1,7 @@
 package cn.xiongyu.net.file;
 
 import java.io.*;
+import java.lang.String;
 import java.net.Socket;
 
 /**

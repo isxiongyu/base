@@ -1,7 +1,7 @@
 package cn.xiongyu.collection;
 
+import java.lang.String;
 import java.util.HashSet;
-import java.util.Set;
 
 /**
  * ClassName: HashSetTest

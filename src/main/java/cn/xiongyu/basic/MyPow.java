@@ -1,5 +1,7 @@
 package cn.xiongyu.basic;
 
+import java.lang.String;
+
 /**
  * ClassName: BitOpe
  * Package: cn.xiongyu.basic
@@ -27,7 +29,7 @@ public class MyPow {
 
     public static void main(String[] args) {
         MyPow myPow = new MyPow();
-        System.out.println(myPow.pow(2, 2147483647));
+        System.out.println(myPow.pow(2, 214));
     }
 
 }
