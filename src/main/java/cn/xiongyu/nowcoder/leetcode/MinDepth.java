@@ -1,6 +1,7 @@
 package cn.xiongyu.nowcoder.leetcode;
 
-import org.junit.jupiter.api.Test;
+
+import org.junit.Test;
 
 /**
  * ClassName: MinDepth

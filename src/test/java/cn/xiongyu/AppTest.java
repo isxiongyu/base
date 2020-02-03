@@ -88,7 +88,10 @@ public class AppTest
     }
     @Test
     public void test08() {
-
+        String s = "\uD834\uDF06高小叶是垃圾";
+        char[] c = s.toCharArray();
+//        System.out.println("\uD834");
+        System.out.println(s.substring(8, 8));
     }
 }
 

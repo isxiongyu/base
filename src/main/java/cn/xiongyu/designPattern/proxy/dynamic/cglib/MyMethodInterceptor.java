@@ -18,6 +18,9 @@ public class MyMethodInterceptor implements MethodInterceptor {
     @Override
     public Object intercept(Object o, Method method, Object[] objects, MethodProxy methodProxy) throws Throwable {
         System.out.println("服务前");
+        System.out.println(method);
+        System.out.println(methodProxy);
+//        System.out.println(o);
         Object obj = methodProxy.invokeSuper(o, objects);
         System.out.println("服务后");
         return obj;
