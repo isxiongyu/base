@@ -19,7 +19,6 @@ public class Head {
             swap(array, 0, i);
             maxHead(array, i, 0);
         }
-
     }
     public void createHead(int[] array) {
         for (int i = (array.length - 1) / 2; i >= 0; i--) {

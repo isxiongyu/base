@@ -1,7 +1,9 @@
 package cn.xiongyu.designPattern.proxy.dynamic;
 
 import cn.xiongyu.designPattern.proxy.dynamic.cglib.MyMethodInterceptor;
-import cn.xiongyu.designPattern.proxy.dynamic.cglib.Service;
+import cn.xiongyu.designPattern.proxy.dynamic.jdk.ProxyUtil;
+import cn.xiongyu.designPattern.proxy.dynamic.jdk.Service;
+import cn.xiongyu.designPattern.proxy.dynamic.jdk.ServiceImpl;
 import net.sf.cglib.proxy.Enhancer;
 
 
@@ -15,16 +17,16 @@ import net.sf.cglib.proxy.Enhancer;
 public class ProxyTest {
     public static void main(String[] args) {
 //        jdk
-//        ProxyUtil proxyUtil = new ProxyUtil();
-//        Service service = new ServiceImpl();
-//        Service proxy = proxyUtil.getProxyByJDK(service);
-//        proxy.doSomething();
+        ProxyUtil proxyUtil = new ProxyUtil();
+        Service service = new ServiceImpl();
+        Service proxy = proxyUtil.getProxyByJDK(service);
+        proxy.doSomething();
 //        cglib
-        Enhancer enhancer = new Enhancer();
-        enhancer.setSuperclass(Service.class);
-        enhancer.setCallback(new MyMethodInterceptor());
-        Service service = (Service) enhancer.create();
-        service.doSomething(1, 2);
+//        Enhancer enhancer = new Enhancer();
+//        enhancer.setSuperclass(Service.class);
+//        enhancer.setCallback(new MyMethodInterceptor());
+//        Service service = (Service) enhancer.create();
+//        service.doSomething(1, 2);
 //        service.doSomething2();
     }
 }

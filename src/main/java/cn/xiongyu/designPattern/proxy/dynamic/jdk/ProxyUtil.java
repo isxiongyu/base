@@ -1,5 +1,10 @@
 package cn.xiongyu.designPattern.proxy.dynamic.jdk;
 
+import sun.misc.ProxyGenerator;
+
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
@@ -23,5 +28,21 @@ public class ProxyUtil {
             }
         });
         return serviceProxy;
+    }
+//    用于生成proxy代理对象
+    public static void main(String[] args) throws IOException {
+        byte[] classFles = ProxyGenerator.generateProxyClass("$Proxy", new Class[]{Service.class});
+        String path = "/home/xiongyu/Documents/java-study/class/ServiceProxy.class";
+        FileOutputStream fos = null;
+        try {
+            fos = new FileOutputStream(path);
+            fos.write(classFles);
+            fos.flush();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            if (fos != null)
+                fos.close();
+        }
     }
 }
