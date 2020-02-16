@@ -22,8 +22,8 @@ public class Shell {
                 for (int j = i + step; j < array.length; j += step) {
                     int m;
                     int temp = array[j];
-                    for (m = j; m > 0 && temp < array[m - 1]; m--) {
-                        array[m] = array[m -1];
+                    for (m = j; m - step >= 0 && temp < array[m - 1]; m -= step) {
+                        array[m] = array[m - step];
                     }
                     array[m] = temp;
                 }
