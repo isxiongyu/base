@@ -15,9 +15,9 @@ import java.util.Arrays;
 public class Bubble {
     public void bubbleSort(int[] array) {
         for (int i = 0; i < array.length; i++) {
-            for (int j = i + 1; j < array.length; j++) {
-                if (array[j] < array[i]) {
-                    swap(array, i, j);
+            for (int j = 1; j < array.length - i; j++) {
+                if (array[j] < array[j - 1]) {
+                    swap(array, j - 1, j);
                 }
             }
         }
@@ -32,7 +32,7 @@ public class Bubble {
     }
     @Test
     public void test() {
-        int nums = 100000;
+        int nums = 1000;
         int[] array = new int[nums];
         for (int i = 0; i < array.length; i++) {
             array[i] = (int) (Math.random() * nums);
@@ -45,7 +45,7 @@ public class Bubble {
     }
     @Test
     public void test02() {
-        int nums = 100000;
+        int nums = 1000;
         int[] array = new int[nums];
         for (int i = 0; i < array.length; i++) {
             array[i] = (int) (Math.random() * nums);
