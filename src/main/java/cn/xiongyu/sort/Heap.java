@@ -12,20 +12,20 @@ import java.util.Arrays;
  * Date: 20-1-20 下午3:37
  * Author: xiongyu
  */
-public class Head {
-    public void headSort(int[] array) {
-        createHead(array);
+public class Heap {
+    public void heapSort(int[] array) {
+        createHeap(array);
         for (int i = array.length - 1; i >= 0; i--) {
             swap(array, 0, i);
-            maxHead(array, i, 0);
+            maxHeap(array, i, 0);
         }
     }
-    public void createHead(int[] array) {
-        for (int i = (array.length - 1) / 2; i >= 0; i--) {
-            maxHead(array, array.length, i);
+    public void createHeap(int[] array) {
+        for (int i = array.length / 2 - 1; i >= 0; i--) {
+            maxHeap(array, array.length, i);
         }
     }
-    public void maxHead(int[] array, int end, int index) {
+    public void maxHeap(int[] array, int end, int index) {
         int leftNode = index * 2 + 1;
         int rightNode = index * 2 + 2;
         int max = index;
@@ -38,7 +38,7 @@ public class Head {
         if (max != index) {
             swap(array, max, index);
 //            交换之后继续构造大顶堆,位置为交换的位置
-            maxHead(array, end, max);
+            maxHeap(array, end, max);
         }
     }
     public void swap(int[] array, int i, int j) {
@@ -57,7 +57,7 @@ public class Head {
             array[i] = (int) (Math.random() * nums);
         }
         long start = System.currentTimeMillis();
-        headSort(array);
+        heapSort(array);
         long end = System.currentTimeMillis();
         System.out.println(Arrays.toString(array));
         System.out.println(end - start);
@@ -70,7 +70,7 @@ public class Head {
             array[i] = (int) (Math.random() * nums);
         }
         int[] copy = array.clone();
-        headSort(array);
+        heapSort(array);
         Arrays.sort(copy);
         System.out.println(Arrays.equals(array, copy));
     }

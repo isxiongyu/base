@@ -20,7 +20,7 @@ public class ProxyTest {
         ProxyUtil proxyUtil = new ProxyUtil();
         Service service = new ServiceImpl();
         Service proxy = proxyUtil.getProxyByJDK(service);
-        proxy.doSomething();
+        proxy.doSomething2();
 //        cglib
 //        Enhancer enhancer = new Enhancer();
 //        enhancer.setSuperclass(Service.class);

@@ -2,6 +2,7 @@ package cn.xiongyu.net;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.OutputStream;
 import java.lang.String;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -20,6 +21,7 @@ public class Server {
         System.out.println("等待中...");
         Socket socket = null;
         InputStream is = null;
+        OutputStream os = null;
         while (true) {
             socket = serverSocket.accept();
             is = socket.getInputStream();
@@ -29,7 +31,7 @@ public class Server {
             while ((len = is.read(bytes)) != -1) {
                 sb.append(new String(bytes, 0, len,"UTF-8"));
             }
-            System.out.println("智障: " + sb);
+            System.out.println("服务器: " + sb);
         }
 //        is.close();
 //        socket.close();

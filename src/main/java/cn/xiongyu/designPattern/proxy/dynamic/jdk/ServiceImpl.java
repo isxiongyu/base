@@ -10,6 +10,11 @@ package cn.xiongyu.designPattern.proxy.dynamic.jdk;
 public class ServiceImpl implements Service {
     @Override
     public void doSomething() {
-        System.out.println("执行service方法");
+        System.out.println("执行doSomething方法");
+    }
+
+    @Override
+    public void doSomething2() {
+        System.out.println("执行doSomething2方法");
     }
 }

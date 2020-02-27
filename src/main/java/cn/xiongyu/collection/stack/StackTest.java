@@ -1,11 +1,11 @@
-package cn.xiongyu.stack;
+package cn.xiongyu.collection.stack;
 
 import java.lang.String;
 import java.util.Stack;
 
 /**
  * ClassName: StackTest
- * Package: cn.xiongyu.stack
+ * Package: cn.xiongyu.collection.stack
  * Description:
  * Date: 19-9-24 下午4:56
  * Author: xiongyu

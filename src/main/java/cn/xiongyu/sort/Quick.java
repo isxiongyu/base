@@ -38,6 +38,7 @@ public class Quick {
         quickSortCore(array, start, j);
         quickSortCore(array, j + 1, end);
     }
+
     public void swap(int[] array, int i, int j) {
         if (array == null || i >= array.length || i < 0 || j < 0 || j >= array.length) {
             return;
@@ -53,6 +54,7 @@ public class Quick {
         for (int i = 0; i < array.length; i++) {
             array[i] = (int) (Math.random() * nums);
         }
+//        System.out.println(Arrays.toString(array));
         long start = System.currentTimeMillis();
         quickSort(array);
         long end = System.currentTimeMillis();

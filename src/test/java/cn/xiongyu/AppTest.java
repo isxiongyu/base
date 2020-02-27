@@ -2,10 +2,16 @@ package cn.xiongyu;
 
 import static org.junit.Assert.assertTrue;
 
+import com.sun.org.apache.regexp.internal.RE;
 import org.junit.Test;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.lang.String;
+import java.net.ServerSocket;
+import java.net.Socket;
 import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * Unit test for simple App.
@@ -92,6 +98,37 @@ public class AppTest
         char[] c = s.toCharArray();
 //        System.out.println("\uD834");
         System.out.println(s.substring(8, 8));
+    }
+    @Test
+    public void test09() {
+        String s = "abababeebbe";
+        String[] strs = s.split("e");
+        System.out.println(strs.length);
+        System.out.println(Arrays.toString(strs));
+    }
+    @Test
+    public void test10() {
+        try {
+            FileInputStream fis = new FileInputStream("/home/xiongyu/Desktop/urls.txt");
+            byte[] b = new byte[10];
+            while (fis.read(b) != -1) {
+                System.out.println(new String(b));
+            }
+//            int num = fis.read(b);
+//            System.out.println("总字节：" + num);
+//            System.out.println(Arrays.toString(b));
+//            System.out.println(new String(b));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    @Test
+    public void test11() {
+        ConcurrentHashMap<String, String> map = new ConcurrentHashMap<>();
+        map.put("sgf", "afsdkf");
+        map.get("sgf");
+        map.size();
+        System.out.println(map.get("sgf"));
     }
 }
 

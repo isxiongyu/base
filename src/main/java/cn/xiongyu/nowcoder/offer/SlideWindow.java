@@ -2,6 +2,9 @@ package cn.xiongyu.nowcoder.offer;
 
 import java.lang.String;
 import java.util.ArrayList;
+import java.util.Deque;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * ClassName: SlideWindow
@@ -11,36 +14,25 @@ import java.util.ArrayList;
  * Author: xiongyu
  */
 public class SlideWindow {
-    public ArrayList<Integer> maxInWindows(int [] num, int size)
-    {
-        ArrayList<Integer> list = new ArrayList<>();
-        if (num == null || num.length == 0 || size == 0) {
-            return list;
+    public List<Integer> maxInWindows(int [] num, int size) {
+        List<Integer> res = new ArrayList<>();
+        if (num == null || num.length < size || size <= 0) {
+            return res;
         }
-        int start = 0;
-        int end = size;
-        int maxIndex = -1;
-        int max = Integer.MIN_VALUE;
-        while (end <= num.length) {
-            if (maxIndex < start) {
-                max = Integer.MIN_VALUE;
-                for (int i = start; i < end; i++) {
-                    if (num[i] >= max) {
-                        max = num[i];
-                        maxIndex = i;
-                    }
-                }
-            } else {
-                if (num[end - 1] >= max) {
-                    max = num[end - 1];
-                    maxIndex = end - 1;
-                }
+        Deque<Integer> queue = new LinkedList<>();
+        for (int i = 0; i < num.length; i++) {
+            while (!queue.isEmpty() && queue.peek() < i - size + 1) {
+                queue.poll();
             }
-            list.add(max);
-            start++;
-            end++;
+            while (!queue.isEmpty() && num[i] >= num[queue.getLast()]) {
+                queue.removeLast();
+            }
+            queue.add(i);
+            if (i >= size - 1) {
+                res.add(num[queue.peek()]);
+            }
         }
-        return list;
+        return res;
     }
 
     public static void main(String[] args) {

@@ -9,4 +9,5 @@ package cn.xiongyu.designPattern.proxy.dynamic.jdk;
  */
 public interface Service {
     void doSomething();
+    void doSomething2();
 }
