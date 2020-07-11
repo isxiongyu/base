@@ -1,4 +1,4 @@
-package cn.xiongyu.qq;
+package cn.xiongyu.exam.qq;
 
 import java.util.*;
 

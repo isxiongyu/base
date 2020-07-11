@@ -1,4 +1,4 @@
-package cn.xiongyu.huawei;
+package cn.xiongyu.exam.huawei;
 
 import java.util.Scanner;
 

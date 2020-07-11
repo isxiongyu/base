@@ -10,8 +10,8 @@ import io.netty.channel.SimpleChannelInboundHandler;
  * Date: 2020/5/3 6:39 下午
  */
 public class LogEventHandler extends SimpleChannelInboundHandler<LogEvent> {
-    @Override
-    protected void messageReceived(ChannelHandlerContext channelHandlerContext, LogEvent logEvent) throws Exception {
+
+    protected void channelRead0(ChannelHandlerContext channelHandlerContext, LogEvent logEvent) throws Exception {
         System.out.println(logEvent);
     }
 }

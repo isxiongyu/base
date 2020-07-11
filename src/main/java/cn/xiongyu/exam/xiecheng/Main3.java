@@ -1,4 +1,4 @@
-package cn.xiongyu.xiecheng;
+package cn.xiongyu.exam.xiecheng;
 
 import java.util.ArrayList;
 import java.util.List;

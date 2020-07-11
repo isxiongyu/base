@@ -1,4 +1,4 @@
-package cn.xiongyu.jingdong;
+package cn.xiongyu.exam.jingdong;
 
 import java.util.HashMap;
 import java.util.Map;

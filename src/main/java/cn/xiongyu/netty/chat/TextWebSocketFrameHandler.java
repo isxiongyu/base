@@ -29,16 +29,6 @@ public class TextWebSocketFrameHandler extends SimpleChannelInboundHandler<TextW
     }
 
     @Override
-    protected void messageReceived(ChannelHandlerContext ctx, TextWebSocketFrame msg) throws Exception {
-        //增加消息的引用计数（保留消息），并将他写到 ChannelGroup 中所有已经连接的客户端
-        Channel channel = ctx.channel();
-        //自己发送的消息不返回给自己
-        group.remove(channel);
-        group.writeAndFlush(msg.retain());
-        group.add(channel);
-    }
-
-    @Override
     public void userEventTriggered(ChannelHandlerContext ctx, Object evt) throws Exception {
         //是否握手成功，升级为 Websocket 协议
         if (evt == WebSocketServerProtocolHandler.ServerHandshakeStateEvent.HANDSHAKE_COMPLETE) {
@@ -56,5 +46,14 @@ public class TextWebSocketFrameHandler extends SimpleChannelInboundHandler<TextW
         } else {
             super.userEventTriggered(ctx, evt);
         }
+    }
+
+    protected void channelRead0(ChannelHandlerContext ctx, TextWebSocketFrame msg) throws Exception {
+        //增加消息的引用计数（保留消息），并将他写到 ChannelGroup 中所有已经连接的客户端
+        Channel channel = ctx.channel();
+        //自己发送的消息不返回给自己
+        group.remove(channel);
+        group.writeAndFlush(msg.retain());
+        group.add(channel);
     }
 }

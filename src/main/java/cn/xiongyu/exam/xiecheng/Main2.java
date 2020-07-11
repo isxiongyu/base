@@ -1,6 +1,5 @@
-package cn.xiongyu.xiecheng;
+package cn.xiongyu.exam.xiecheng;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 /**

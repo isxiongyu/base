@@ -1,4 +1,4 @@
-package cn.xiongyu.duxiaoman;
+package cn.xiongyu.exam.duxiaoman;
 
 import java.util.Scanner;
 
