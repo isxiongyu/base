@@ -1,15 +1,10 @@
 package cn.xiongyu.kafka.producer;
 
-import cn.xiongyu.kafka.topic.TopicUtil;
 import org.apache.kafka.clients.producer.*;
-import org.apache.kafka.common.Cluster;
-import org.apache.kafka.common.serialization.StringSerializer;
 import org.apache.log4j.Logger;
-import org.apache.log4j.spi.LoggerFactory;
 
 import java.util.Properties;
 import java.util.concurrent.ExecutionException;
-import java.util.concurrent.Future;
 
 /**
  * ClassName ProducerTest
