@@ -130,6 +130,24 @@ public class AppTest
         map.size();
         System.out.println(map.get("sgf"));
     }
+    @Test
+    public void test12() {
+        String s1 = new String("abc");
+        String intern = s1.intern();
+        String s2 = "abc";
+        System.out.println(intern == s2);
+    }
+
+    @Test
+    public void test13() {
+        int count = 0;
+        int x = 202008;
+        while (x > 0) {
+            count++;
+            x = x & (x - 1);
+        }
+        System.out.println(count);
+    }
 }
 
 class MyComparator implements Comparator<Integer> {

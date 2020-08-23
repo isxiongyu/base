@@ -4,6 +4,8 @@ package cn.xiongyu.sort;
 import org.junit.Test;
 
 import java.util.Arrays;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 /**
  * ClassName: Head
@@ -64,6 +66,10 @@ public class Heap {
     }
     @Test
     public void test02() {
+        ExecutorService executor1 = Executors.newCachedThreadPool();
+        ExecutorService executor2 = Executors.newFixedThreadPool(6);
+        ExecutorService executor3 = Executors.newSingleThreadExecutor();
+        ExecutorService executor4 = Executors.newScheduledThreadPool(8);
         int nums = 100000;
         int[] array = new int[nums];
         for (int i = 0; i < array.length; i++) {
